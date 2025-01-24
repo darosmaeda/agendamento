@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Consulta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"
+</head>
+<body>
+    <h1>Selecione seu horário</h1>
+    <ul>
+        {% for slot in available_slots %}
+            <li>
+                <a href=" url_for('book', event_id=loop.index) }}"
+                    {{ slot['summary'] }} - {{ slot['start'] }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
